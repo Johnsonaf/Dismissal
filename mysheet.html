@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- This makes it mobile-responsive -->
+  <title>My Mobile-Friendly Sheet</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden; /* Prevents extra scrollbars */
+      background-color: #f9f9f9; /* Light background for better contrast */
+    }
+    .sheet-container {
+      position: relative;
+      width: 100%;
+      height: 100vh; /* Full screen height on mobile */
+      overflow: auto; /* Allows scrolling inside the container */
+    }
+    .sheet-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none; /* No ugly borders */
+    }
+    /* Mobile tweaks: Adjust for smaller screens */
+    @media (max-width: 768px) {
+      .sheet-container {
+        height: auto; /* Let it expand naturally */
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="sheet-container">
+    <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ0-CCmCp9wKUfmPF4LomJU9R7et7TQDCxLgv1HRJACst2mF2gloHWa7osZ059JL3EZlanDuLBcTYq4/pubhtml?widget=true&amp;headers=false"></iframe>
+  </div>
+</body>
+</html>
